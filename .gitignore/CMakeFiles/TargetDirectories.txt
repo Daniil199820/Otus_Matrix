@@ -1,0 +1,9 @@
+/home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/Matrix.dir
+/home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/package.dir
+/home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/package_source.dir
+/home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/edit_cache.dir
+/home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/rebuild_cache.dir
+/home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/list_install_components.dir
+/home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/install.dir
+/home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/install/local.dir
+/home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/install/strip.dir
