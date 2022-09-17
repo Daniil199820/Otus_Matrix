@@ -1,11 +1,16 @@
-cmake_minimum_required(VERSION 2.8)
+cmake_minimum_required(VERSION 3.2)
 
 set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
 set(PROJECT_VERSION 0.0.${PATCH_VERSION})
 
 project(Matrix VERSION ${PROJECT_VERSION})
 
-find_package(GTest REQUIRED)
+
+
+set(INSTALL_GTEST OFF)
+
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/GTEST_LIN"
+"googletest")
 
 add_executable(Matrix main.cpp)
 add_executable(TEST_lib test_lib.cpp)
@@ -21,7 +26,7 @@ target_include_directories(TEST_lib PRIVATE ${GTEST_INCLUDE_DIRS})
 
 
 target_link_libraries(TEST_lib PRIVATE
- ${GTEST_BOTH_LIBRARIES} pthread)
+ gtest gtest_main)
 
 
 
