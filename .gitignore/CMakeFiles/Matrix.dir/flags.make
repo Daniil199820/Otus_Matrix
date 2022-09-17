@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/daniil/cpp/Otus_Matrix
+CXX_INCLUDES = 
 
 CXX_FLAGS = -Wall -Wextra -pedantic -Werror -std=gnu++17
 

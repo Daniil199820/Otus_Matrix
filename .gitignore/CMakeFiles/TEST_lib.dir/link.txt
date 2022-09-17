@@ -1,1 +1,1 @@
-/usr/bin/c++ -rdynamic CMakeFiles/TEST_lib.dir/test_lib.cpp.o -o TEST_lib  /usr/lib/x86_64-linux-gnu/libgtest.a /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a 
+/usr/bin/c++ -rdynamic CMakeFiles/TEST_lib.dir/test_lib.cpp.o -o TEST_lib  /usr/lib/x86_64-linux-gnu/libgtest.a /usr/lib/x86_64-linux-gnu/libgtest_main.a -lpthread /usr/lib/x86_64-linux-gnu/libgtest.a 
