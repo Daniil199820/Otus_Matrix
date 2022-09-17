@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /home/daniil/cpp/Otus_Matrix/.gitignore
 
 # The main recursive "all" target.
 all: CMakeFiles/Matrix.dir/all
+all: CMakeFiles/TEST_lib.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,6 +73,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/Matrix.dir/clean
+clean: CMakeFiles/TEST_lib.dir/clean
 .PHONY : clean
 
 #=============================================================================
@@ -99,6 +101,32 @@ Matrix: CMakeFiles/Matrix.dir/rule
 CMakeFiles/Matrix.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Matrix.dir/build.make CMakeFiles/Matrix.dir/clean
 .PHONY : CMakeFiles/Matrix.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/TEST_lib.dir
+
+# All Build rule for target.
+CMakeFiles/TEST_lib.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TEST_lib.dir/build.make CMakeFiles/TEST_lib.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TEST_lib.dir/build.make CMakeFiles/TEST_lib.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles --progress-num=3,4 "Built target TEST_lib"
+.PHONY : CMakeFiles/TEST_lib.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/TEST_lib.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TEST_lib.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles 0
+.PHONY : CMakeFiles/TEST_lib.dir/rule
+
+# Convenience name for target.
+TEST_lib: CMakeFiles/TEST_lib.dir/rule
+.PHONY : TEST_lib
+
+# clean rule for target.
+CMakeFiles/TEST_lib.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TEST_lib.dir/build.make CMakeFiles/TEST_lib.dir/clean
+.PHONY : CMakeFiles/TEST_lib.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

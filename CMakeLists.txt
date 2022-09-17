@@ -5,12 +5,28 @@ set(PROJECT_VERSION 0.0.${PATCH_VERSION})
 
 project(Matrix VERSION ${PROJECT_VERSION})
 
-add_executable(Matrix main.cpp)
+find_package(GTest REQUIRED)
 
-set_target_properties(Matrix PROPERTIES
+add_executable(Matrix main.cpp)
+add_executable(TEST_lib test_lib.cpp)
+
+set_target_properties(Matrix TEST_lib PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
 )
+
+target_include_directories(TEST_lib PRIVATE ${GTEST_INCLUDE_DIRS})
+
+target_include_directories(Matrix PRIVATE
+${CMAKE_CURRENT_SOURCE_DIR})
+
+target_include_directories(TEST_lib PRIVATE
+${CMAKE_CURRENT_SOURCE_DIR})
+
+
+target_link_libraries(TEST_lib PRIVATE
+ ${GTEST_BOTH_LIBRARIES})
+
 
 
 if (MSVC)
@@ -20,8 +36,14 @@ if (MSVC)
     target_compile_options(Matrix PRIVATE
         /W4
     )
+    target_compile_options(TEST_lib PRIVATE
+        /W4
+    )
 else ()
     target_compile_options(Matrix PRIVATE
+        -Wall -Wextra -pedantic -Werror
+    )
+    target_compile_options(TEST_lib PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
 endif()
@@ -40,5 +62,7 @@ set(CPACK_PACKAGE_CONTACT example@example.com)
 
 include(CPack)
 
+enable_testing()
 
+add_test(TEST_lib TEST_lib)
 

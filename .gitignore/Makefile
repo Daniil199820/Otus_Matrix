@@ -85,6 +85,16 @@ package_source:
 package_source/fast: package_source
 .PHONY : package_source/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -194,6 +204,19 @@ Matrix/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Matrix.dir/build.make CMakeFiles/Matrix.dir/build
 .PHONY : Matrix/fast
 
+#=============================================================================
+# Target rules for targets named TEST_lib
+
+# Build rule for target.
+TEST_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 TEST_lib
+.PHONY : TEST_lib
+
+# fast build rule for target.
+TEST_lib/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TEST_lib.dir/build.make CMakeFiles/TEST_lib.dir/build
+.PHONY : TEST_lib/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -218,6 +241,30 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Matrix.dir/build.make CMakeFiles/Matrix.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+test_lib.o: test_lib.cpp.o
+.PHONY : test_lib.o
+
+# target to build an object file
+test_lib.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TEST_lib.dir/build.make CMakeFiles/TEST_lib.dir/test_lib.cpp.o
+.PHONY : test_lib.cpp.o
+
+test_lib.i: test_lib.cpp.i
+.PHONY : test_lib.i
+
+# target to preprocess a source file
+test_lib.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TEST_lib.dir/build.make CMakeFiles/TEST_lib.dir/test_lib.cpp.i
+.PHONY : test_lib.cpp.i
+
+test_lib.s: test_lib.cpp.s
+.PHONY : test_lib.s
+
+# target to generate assembly for a file
+test_lib.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/TEST_lib.dir/build.make CMakeFiles/TEST_lib.dir/test_lib.cpp.s
+.PHONY : test_lib.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -232,10 +279,15 @@ help:
 	@echo "... package"
 	@echo "... package_source"
 	@echo "... rebuild_cache"
+	@echo "... test"
 	@echo "... Matrix"
+	@echo "... TEST_lib"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... test_lib.o"
+	@echo "... test_lib.i"
+	@echo "... test_lib.s"
 .PHONY : help
 
 

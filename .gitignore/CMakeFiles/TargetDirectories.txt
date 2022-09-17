@@ -1,6 +1,8 @@
 /home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/Matrix.dir
+/home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/TEST_lib.dir
 /home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/package.dir
 /home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/package_source.dir
+/home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/test.dir
 /home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/edit_cache.dir
 /home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/rebuild_cache.dir
 /home/daniil/cpp/Otus_Matrix/.gitignore/CMakeFiles/list_install_components.dir
