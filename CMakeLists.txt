@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.2)
+cmake_minimum_required(VERSION 2.8)
 
 set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
 set(PROJECT_VERSION 0.0.${PATCH_VERSION})
@@ -21,7 +21,7 @@ target_include_directories(TEST_lib PRIVATE ${GTEST_INCLUDE_DIRS})
 
 
 target_link_libraries(TEST_lib PRIVATE
- ${GTEST_BOTH_LIBRARIES})
+ ${GTEST_BOTH_LIBRARIES} pthread)
 
 
 
