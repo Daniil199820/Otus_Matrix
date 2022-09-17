@@ -17,11 +17,7 @@ set_target_properties(Matrix TEST_lib PROPERTIES
 
 target_include_directories(TEST_lib PRIVATE ${GTEST_INCLUDE_DIRS})
 
-target_include_directories(Matrix PRIVATE
-${CMAKE_CURRENT_SOURCE_DIR})
 
-target_include_directories(TEST_lib PRIVATE
-${CMAKE_CURRENT_SOURCE_DIR})
 
 
 target_link_libraries(TEST_lib PRIVATE
