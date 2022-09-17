@@ -1,3 +1,9 @@
 [submodule "GTES_LIN"]
 	path = GTES_LIN
 	url = https://github.com/google/googletest
+[submodule "GTEST_LIN"]
+	path = GTEST_LIN
+	url = https://github.com/google/googletest
+[submodule "GTEST_LINUX"]
+	path = GTEST_LINUX
+	url = https://github.com/google/googletest

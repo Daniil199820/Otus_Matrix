@@ -9,7 +9,7 @@ project(Matrix VERSION ${PROJECT_VERSION})
 
 set(INSTALL_GTEST OFF)
 
-add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/GTEST_LIN"
+add_subdirectory("${CMAKE_CURRENT_SOURCE_DIR}/GTEST_LINUX"
 "googletest")
 
 add_executable(Matrix main.cpp)
